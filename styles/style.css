@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff305b;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: #333;
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #ff305b;
+  color: #fff;
+}
+
+.active {
+  color: #ff305b;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.content h2::before {
+  content: "";
+  border-color: #ff305b;
+  border-style: solid;
+  border-width: 1px 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 79px;
+  margin: 0 auto;
+  width: 70px;
+  padding: 4px 0 5px;
+}
+
+.content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  padding: 15px 0;
+}
+
+.content h2::after {
+  content: "";
+  background-color: #ff305b;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  margin: 0 auto;
+  height: 1px;
+  width: 160px;
+}
+
+/* Start Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar.active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar .navbar-brand {
+  color: #ff305b;
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ff305b;
+}
+
+.navbar .navbar-toggler {
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  border: 0;
+}
+
+.navbar .navbar-toggler span {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.navbar .navbar-toggler span i {
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.navbar .navbar-toggler span:hover i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: #ff305b;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ff305b;
+}
+
+/* Start Home */
+.home {
+  background-image: url(../img/slider/slider-01.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.home .postion-layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.home .home-item h3 {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.home .home-item h1 {
+  color: #ff305b;
+  font-size: 5rem;
+}
+
+.home .home-item h4 {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+/* Start About */
+.about .about-portofilo {
+  left: 2%;
+  width: 70%;
+  height: 100%;
+  border-radius: 6px;
+  border: 10px solid #555;
+}
+
+.about .portflio-photo {
+  left: 6%;
+  overflow: hidden;
+}
+
+.about .layer-border {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 61, 61, 0.6);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.about .portflio-photo:hover .layer-border {
+  top: 0;
+}
+
+.about .layer-border ul li a {
+  position: relative;
+  top: 189px;
+  left: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.about .layer-border ul li a:hover {
+  color: #ff305b;
+}
+
+.about .box-info h3 {
+  font-size: 2.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+}
+
+.about .box-info h3::after {
+  content: "";
+  background: #ff305b none no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 57%;
+  width: 4px;
+}
+
+.about .box-info p {
+  border-bottom: 1px dashed #999999;
+  color: #555;
+  font-weight: 400;
+}
+
+.about .info-users ul span {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about .info-users ul a {
+  color: #333;
+}
+
+.about .download-users-btn a {
+  background-color: #ff305b;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-size: 1rem;
+}
+
+.about .download-users-btn a:hover {
+  background-color: #EC2403;
+}
+
+/* Start Servies */
+.services .item:hover .inner {
+  background-color: #fff;
+}
+
+.services .item .inner {
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  padding: 40px 12px;
+}
+
+.services .item .inner i {
+  color: #ff305b;
+  padding: 10px;
+  font-size: 23px;
+  margin-bottom: 10px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.services .item:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.services .item h3 {
+  font-size: 1.3rem;
+}
+
+/* Start portfolio */
+.portfolio .portfolio-layer:hover .inner-layer {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.portfolio .inner-layer {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.portfolio .inner-layer a {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #ff305b;
+  font-size: 1.2rem;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.portfolio .inner-layer:hover a {
+  opacity: 1;
+}
+
+/* Start Counter */
+.counter .item-count i {
+  font-size: 1.4rem;
+  color: #ff305b;
+  margin-bottom: 15px;
+}
+
+.counter .info-count h3 {
+  font-size: 1.8rem;
+}
+
+.counter .info-count h5 {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Start testimonial */
+.testimonial .testimonial-item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 80%;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+}
+
+.testimonial .testimonial-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -270px;
+  width: 75px;
+  height: 72px;
+  border-color: #ff305b rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-width: 191px;
+  border-style: solid;
+  z-index: 1;
+}
+
+.testimonial .testimonial-item .feedback-img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40%;
+  z-index: 999;
+}
+
+.testimonial .testimonial-item .test-info {
+  padding-left: 1rem;
+}
+
+.testimonial .testimonial-item .test-info h3 {
+  font-size: 2.6rem;
+}
+
+.testimonial .testimonial-item .test-info a {
+  font-size: .9rem;
+  color: #777;
+}
+
+.testimonial .testimonial-item .test-info p {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.testimonial .testimonial-item .test-info .review-icons i {
+  color: #f1c30d;
+}
+
+/* Start Blog */
+.blog .inner-blog h3 a {
+  font-size: 1.3rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.blog .inner-blog h3:hover {
+  color: #ff305b;
+}
+
+.blog .inner-blog a {
+  color: #333;
+  font-size: 1.1rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.blog .inner-blog a:hover {
+  color: #ff305b;
+}
+
+/* Start Contact */
+.contact .btn {
+  background-color: #ff305b;
+  color: #fff;
+  border-color: #ff305b;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact .btn:hover {
+  background-color: #EC2403;
+}
+
+/* Start Footer */
+footer {
+  background-color: #333;
+}
+
+footer .icons-footer ul a {
+  color: #fff;
+  padding: 6px 10px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+footer .icons-footer ul a:hover {
+  color: #ff305b;
+}
+
+footer p {
+  color: #fff;
+}
+
+footer p a {
+  color: #ff305b;
+  font-size: 1.1rem;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 99999;
+}
+
+#loading .loading-box h1.ml8 {
+  font-weight: 900;
+  font-size: 4.5em;
+  color: #fff;
+  width: 3em;
+  height: 3em;
+}
+
+#loading .loading-box .ml8 .letters-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 1em;
+}
+
+#loading .loading-box .ml8 .letters {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 0.7em;
+  right: -0.12em;
+  top: -0.2em;
+}
+
+#loading .loading-box .ml8 .bang {
+  font-size: 1.4em;
+  top: auto;
+  left: -0.06em;
+}
+
+#loading .loading-box .ml8 .circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+#loading .loading-box .ml8 .circle-white {
+  width: 3em;
+  height: 3em;
+  border: 2px dashed white;
+  border-radius: 2em;
+}
+
+#loading .loading-box .ml8 .circle-dark {
+  width: 2.2em;
+  height: 2.2em;
+  background-color: #ff305b;
+  border-radius: 3em;
+  z-index: 1;
+}
+
+#loading .loading-box .ml8 .circle-dark-dashed {
+  border-radius: 2.4em;
+  width: 2.3em;
+  height: 2.3em;
+}
+
+/* Start Media */
+@media (max-width: 991px) {
+  .home .home-item h3 {
+    font-size: 1.4rem;
+  }
+  .home .home-item h1 {
+    font-size: 4rem;
+  }
+  .home .home-item h4 {
+    font-size: 1.4rem;
+  }
+  .about .about-box {
+    height: 100%;
+  }
+  .about .about-info {
+    padding: 3rem 0;
+  }
+  .about .about-portofilo {
+    width: 50%;
+    height: 100%;
+  }
+  .testimonial .testimonial-item {
+    padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .testimonial .testimonial-item .feedback-img {
+    width: 80%;
+    margin: -6rem 0 0 1rem;
+  }
+  .testimonial .testimonial-item .test-info {
+    padding-left: 1rem;
+  }
+  .testimonial .testimonial-item .test-info h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .home-item h1 {
+    font-size: 3rem;
+  }
+  .home .home-item h4 {
+    font-size: 1.2rem;
+  }
+  .home .home-item h3 {
+    font-size: 1.2rem;
+  }
+  .about .about-box {
+    width: 100%;
+  }
+  .about .about-portofilo {
+    width: 70%;
+  }
+  .testimonial .testimonial-item {
+    width: 100%;
+  }
+  .testimonial .testimonial-item .feedback-img {
+    width: 100%;
+    margin: -12rem 0 0 0;
+  }
+  .testimonial .testimonial-item .test-info {
+    padding-left: 1rem;
+  }
+  .testimonial .testimonial-item .test-info h3 {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

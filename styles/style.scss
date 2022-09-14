@@ -1,0 +1,560 @@
+$white-color:#fff;
+$tomate-color:#ff305b;
+$blue-color:#333;
+$opactiy-color-blue:#555;
+$orange-color:#EC2403;
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box; border: none;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: $tomate-color;
+}
+h1, h2, h3, h4, h5, h6, span{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $blue-color;
+}
+p{  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    color: $blue-color;
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    &:hover{
+        background-color: $tomate-color;
+        color: $white-color;
+    }
+}
+.active{
+    color: $tomate-color;
+    background-color: rgba(0, 0, 0, 0);
+}
+.content h2::before{
+    content: "";
+    border-color: $tomate-color;
+    border-style: solid;
+    border-width: 1px 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 79px;
+    margin: 0 auto;
+    width: 70px;
+    padding: 4px 0 5px;
+}
+.content h2{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+}
+.content h2::after{
+    content: "";
+    background-color: $tomate-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    margin: 0 auto;
+    height: 1px;
+    width: 160px;
+}
+/* Start Navbar */
+.navbar{
+    background-color: rgba(0, 0, 0, .5);
+    &.active{
+        background-color: rgba(0, 0, 0, .6);
+    }
+    .navbar-brand{
+        color: $tomate-color;
+        font-size: 1.6rem;
+        font-family: 'Source Sans Pro', sans-serif;
+        &:hover{
+            color: $tomate-color;
+        }
+    }
+    .navbar-toggler{
+        box-shadow: 0 0 0 0;
+        border:0;
+        span{
+            color: $white-color;
+            font-size: 1.6rem;
+            i{
+                transition: all .8s;
+            }
+            &:hover i{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .navbar-nav .nav-link.active{
+        color: $tomate-color;
+    }
+    .navbar-nav .nav-link{
+        color: $white-color;
+    }
+    .navbar-nav .nav-link:hover{
+        color: $tomate-color;
+    }
+}
+/* Start Home */
+.home{
+    background-image: url(../img/slider/slider-01.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    .postion-layer{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .9);
+    }
+    .home-item{
+        h3{
+           color: $white-color;
+           font-size: 1.7rem;
+       }
+       h1{
+           color: $tomate-color;
+           font-size: 5rem;
+       }
+       h4{
+           color: $white-color;
+           font-size: 1.7rem;
+           font-weight: 300;
+       }
+    }
+}
+/* Start About */
+.about{
+    .about-portofilo{
+        left: 2%;
+        width: 70%;
+        height: 100%;
+        border-radius: 6px;
+        border: 10px solid $opactiy-color-blue;
+    }
+    .portflio-photo{
+        left: 6%;
+        overflow: hidden;
+    }
+    .layer-border{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(63, 61, 61, .6);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: top .5s;
+    }
+    .portflio-photo:hover .layer-border{
+        top: 0;
+    }
+    .layer-border ul li a{
+        position: relative;
+        top: 189px;
+        left:100%;
+        color: $white-color;
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        transform: translateX(-50%);
+        transition: all .5s;
+    }
+    .layer-border ul li a:hover{
+        color: $tomate-color;
+    }
+    .box-info{
+        h3{
+            font-size: 2.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: $blue-color;
+            &::after{
+                content: "";
+                background: $tomate-color none no-repeat;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                height: 57%;
+                width: 4px;
+            }
+        }
+        p{
+            border-bottom: 1px dashed #999999;
+            color: $opactiy-color-blue;
+            font-weight: 400;
+        }
+    }
+    .info-users{
+        ul{
+            span{
+                font-weight: 400;
+                font-size: 1.2rem;
+                color: $opactiy-color-blue;
+             }
+            a{
+                color: $blue-color;
+            }
+        } 
+    }
+    .download-users-btn a{
+        background-color: $tomate-color ;
+        color: $white-color;
+        transition: all .3s;
+        font-size: 1rem;
+    }
+    .download-users-btn a:hover{
+        background-color: $orange-color;
+    }
+}
+/* Start Servies */
+.services{
+    .item{
+        &:hover .inner{
+            background-color: $white-color;
+        }
+        .inner{
+            transition: background-color .5s;
+            padding: 40px 12px;
+            i{
+               color: $tomate-color;
+               padding: 10px;
+               font-size: 23px;
+               margin-bottom: 10px;
+               transition: transform 1s;
+           }
+        }
+        &:hover i{
+            transform: scale(1.2);
+        }
+        h3{
+            font-size: 1.3rem;
+        }
+    }
+}
+/* Start portfolio */
+.portfolio{
+    .portfolio-layer:hover .inner-layer{
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 1;
+    }
+    .inner-layer
+    {
+        opacity: 0;
+        transition: all .5s;
+        a{
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: $tomate-color;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all .5s;
+        }
+        &:hover a{
+            opacity: 1;
+        }
+    }
+}
+/* Start Counter */
+.counter{
+    .item-count{
+        i{
+           font-size: 1.4rem;
+           color: $tomate-color;
+           margin-bottom: 15px;
+       }
+    }
+    .info-count{
+        h3{
+            font-size: 1.8rem;
+        }
+        h5{
+            font-size: 1.1rem;
+            color: $opactiy-color-blue;
+        }
+    }
+}
+/* Start testimonial */
+.testimonial{
+    .testimonial-item{
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 80%;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #f1f1f1;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -270px;
+            width: 75px;
+            height: 72px;
+            border-color: $tomate-color rgba(0, 0, 0,0) rgba(0, 0, 0, 0);
+            border-width: 191px;
+            border-style: solid;
+            z-index: 1;
+        }
+        .feedback-img{
+            border-radius: 50%;
+            overflow: hidden;
+            width: 40%;
+            z-index: 999;
+        }
+        .test-info{
+            padding-left: 1rem;
+            h3{
+                font-size: 2.6rem;
+            }
+            a{
+               font-size: .9rem;
+               color: #777;
+           }
+           p{
+               font-family: 'Poppins', sans-serif;
+               margin-bottom: 10px;
+           }
+           .review-icons{
+               i{
+                   color: #f1c30d;
+               }
+           } 
+        }
+    }
+
+}
+/* Start Blog */
+.blog{
+    .inner-blog
+    {
+        h3{
+            a{
+               font-size: 1.3rem;
+               transition: color .3s;
+            }
+            &:hover{
+                color: $tomate-color;
+            }
+        }
+        a{
+            color: $blue-color;
+            font-size: 1.1rem;
+            transition: color .3s;
+            &:hover{
+                color: $tomate-color;
+            }
+        }
+    }
+}
+/* Start Contact */
+.contact{
+    .btn{
+        background-color: $tomate-color;
+        color: $white-color;
+        border-color: $tomate-color;
+        transition:all .3s;
+        &:hover{
+            background-color: $orange-color;
+        }
+    }
+}
+/* Start Footer */
+footer{
+    background-color: $blue-color;
+    .icons-footer{
+        ul{
+            a{
+                color: $white-color;
+                padding: 6px 10px;
+                transition: all .5s;
+                &:hover{
+                    color: $tomate-color;
+                }
+            }
+        }
+    }
+    p {
+        color: $white-color;
+        a{
+            color: $tomate-color;
+            font-size: 1.1rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+// Loading
+#loading{
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background-color: $white-color;
+    z-index: 99999;
+    .loading-box{
+        h1.ml8 {
+            font-weight: 900;
+            font-size: 4.5em;
+            color: #fff;
+            width: 3em;
+            height: 3em;
+        }
+        .ml8{
+            .letters-container {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                height: 1em;
+            }
+            .letters {
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                line-height: 0.7em;
+                right: -0.12em;
+                top: -0.2em;
+            }
+            .bang {
+                font-size: 1.4em;
+                top: auto;
+                left: -0.06em;
+            }
+            .circle {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+            }
+              
+            .circle-white {
+                width: 3em;
+                height: 3em;
+                border: 2px dashed white;
+                border-radius: 2em;
+            }
+            
+            .circle-dark {
+                width: 2.2em;
+                height: 2.2em;
+                background-color: $tomate-color;
+                border-radius: 3em;
+                z-index: 1;
+            }
+            .circle-dark-dashed {
+                border-radius: 2.4em;
+                width: 2.3em;
+                height: 2.3em;
+            }
+        }   
+    }
+}
+/* Start Media */
+@media(max-width:991px) {
+    .home{
+        .home-item{
+            h3{
+                font-size: 1.4rem;
+            }
+            h1{
+                font-size: 4rem;
+            }
+            h4{
+                font-size: 1.4rem;
+            }
+        } 
+    }
+    .about{
+        .about-box{
+            height: 100%;
+        }
+        .about-info{
+            padding: 3rem 0;
+        }
+        .about-portofilo{
+            width: 50%;
+            height:100%;
+        }
+    }
+    .testimonial{
+        .testimonial-item{
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .feedback-img{
+                width: 80%;
+                margin: -6rem 0 0 1rem;
+            }
+            .test-info{
+                padding-left: 1rem;
+                h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px) {
+    .home{
+        .home-item{
+            h1{
+                font-size: 3rem;
+            }
+            h4{
+                font-size: 1.2rem;
+            }
+            h3{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .about{
+        .about-box{
+            width: 100%;
+        }
+        .about-portofilo{
+            width: 70%;
+        }
+    }
+    .testimonial{
+        .testimonial-item{
+            width: 100%;
+            .feedback-img{
+                width: 100%;
+                margin: -12rem 0 0 0;
+            }
+            .test-info{
+                padding-left: 1rem;
+                h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
